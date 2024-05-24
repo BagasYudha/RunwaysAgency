@@ -18,27 +18,25 @@
 }
 
 .navbar {
-  scroll-behavior: smooth;
   position: relative;
   color: white; /* Warna teks default */
-  transition: color 0.3s ease; /* Transisi warna teks */
+  font-weight: bold;
+  margin-left: 0.75rem /* 12px */;
+  margin-right: 0.75rem /* 12px */;
+  padding: 12px;
 }
 
 .navbar::after {
-  content: "";
   transition: width 0.3s ease;
-  display: block;
-  position: absolute;
-  background-color: #33baff;
 }
 
 .navbar:hover {
-  color: #33baff;
+  background-color: rgba(217, 217, 217, 0.8);
+  border-radius: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
-.navbar:hover::after {
-  width: 100%;
-}
 /* hover nav end*/
 /* NAVBAR END  */
 
