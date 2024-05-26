@@ -35,10 +35,12 @@
           <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-full" />
         </div>
         <div class="flex justify-end w-full h-full mr-12 items-center">
-          <a href="#" class="navbar">HOME</a>
-          <a href="#" class="navbar">PROFIL</a>
-          <a href="#" class="navbar">MODEL GALERRY</a>
-          <a href="#" class="navbar">REGISTRATION</a>
+          <a href="home.html" class="navbar">HOME</a>
+          <a href="#" class="navbar py-[6px] bg-[--navactive] rounded-[10px]"
+            >PROFIL</a
+          >
+          <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
+          <a href="registration.html" class="navbar">REGISTRATION</a>
         </div>
       </nav>
     </section>
@@ -205,7 +207,10 @@
               >
                 Mr. YIBO
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="yibo"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -240,7 +245,10 @@
               >
                 Mrs. IU
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="iu"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -275,7 +283,10 @@
               >
                 Mr. LINGHE
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="linghe"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -310,7 +321,10 @@
               >
                 Mrs. YOO-JIN
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="yoojin"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -345,7 +359,10 @@
               >
                 Mrs. BAEKHO
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="baekho"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -380,7 +397,10 @@
               >
                 Mrs. HAESUN
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="haesun"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -415,7 +435,10 @@
               >
                 Mrs. JOOBIN
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="joobin"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -450,7 +473,10 @@
               >
                 Mr. HWANG
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="hwang"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -485,7 +511,10 @@
               >
                 Mrs. JI-WON
               </h1>
-              <button class="w-[60%] flex items-center justify-center mt-4">
+              <button
+                class="w-[60%] flex items-center justify-center mt-4"
+                id="jiwon"
+              >
                 <div class="w-full">
                   <h1
                     class="bg-[#9C0C0C] text-white italic text-xl font-semibold rounded-full text-center"
@@ -501,6 +530,7 @@
       </section>
       <!-- KONTEN 3 END -->
 
+      <!-- FOOTER START -->
       <footer class="bg-[#9c0c0c] mt-[10dvh]">
         <div class="w-full py-5 md:flex md:items-center md:justify-between">
           <div class="justify-start ml-12">
@@ -524,10 +554,32 @@
           </div>
         </div>
       </footer>
+      <!-- FOOTER END -->
 
-      <script>
-        feather.replace();
-      </script>
+      <!-- POP UP START -->
+      <section
+        class="fixed top-0 left-0 right-0 bottom-0 bg-white z-[100] flex justify-center items-center hidden"
+        id="about"
+      >
+        <div class="w-1/2 h-auto text-[maroon]">
+          <button
+            class="w-auto py-3 px-4 border-[maroon] border-[2px] absolute rounded-full top-[150px] right-[200px] transition-all hover:bg-[maroon] hover:text-white"
+            id="btn-close"
+          >
+            X
+          </button>
+          <h1
+            class="text-[1.7rem] uppercase italic font-semibold"
+            id="content-h"
+          >
+            inputan di js
+          </h1>
+          <p class="text-justify" id="content-p">inputan di js</p>
+        </div>
+      </section>
+      <!-- POP UP END -->
+
+      <script src="js/profile.js"></script>
     </section>
   </body>
 </html>

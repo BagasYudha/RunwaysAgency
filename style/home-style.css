@@ -2,6 +2,7 @@
   --maroon: #9c0c0c;
   --grey: #d9d9d9;
   --soft-blue: #33baff;
+  --navactive: rgba(217, 217, 217, 0.8);
 }
 /* semua text memakai poppins */
 * {
@@ -28,6 +29,7 @@
   margin-left: 0.75rem /* 12px */;
   margin-right: 0.75rem /* 12px */;
   padding: 12px;
+  transition: 0.3s all linear;
 }
 
 .navbar::after {
@@ -50,7 +52,7 @@
   width: 280px;
   min-width: 280px;
   height: auto;
-  padding: 16px 16px 16px 16px;
+  padding: 16px;
   border-radius: 16px;
   border-width: 2px;
   border-color: #e4f6ff;
@@ -65,10 +67,14 @@
 
 /* .news::-webkit-scrollbar {
   width: 10px;
-} */
+}
 
-/* .item-team::-webkit-scrollbar {
+.item-team::-webkit-scrollbar {
   margin: 10px;
 } */
 
 /* hover item end*/
+
+/* MODEL GALLERY START */
+
+/* MODEL GALLERY END */
