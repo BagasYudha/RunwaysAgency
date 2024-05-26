@@ -47,7 +47,8 @@
 /* hover item */
 .link-item {
   transform-origin: 50% 50%;
-  width: 190px;
+  width: 280px;
+  min-width: 280px;
   height: auto;
   padding: 16px 16px 16px 16px;
   border-radius: 16px;
@@ -59,6 +60,15 @@
 
 .link-item:hover {
   scale: 1.05;
-  border-color: #8152fb;
+  border-color: #ffffff;
 }
+
+/* .news::-webkit-scrollbar {
+  width: 10px;
+} */
+
+/* .item-team::-webkit-scrollbar {
+  margin: 10px;
+} */
+
 /* hover item end*/
