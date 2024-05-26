@@ -68,6 +68,9 @@
 /* .news::-webkit-scrollbar {
   width: 10px;
 }
+.berita-runways::-webkit-scrollbar {
+  width: 0;
+}
 
 .item-team::-webkit-scrollbar {
   margin: 10px;
