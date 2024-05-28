@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home-RunwaysAgency</title>
+    <title>Home - RunwaysAgency</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -18,68 +18,82 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
 
   <body class="font-['Poppins']">
-    <!-- NAVBAR START  -->
-    <section id="navbar">
+    <!-- NAVBAR START -->
+    <header x-data="{ open: false }">
       <nav
-        class="fixed z-50 top-0 justify-between items-center flex w-full h-20 bg-[#9C0C0C] drop-shadow-xl"
+        class="fixed z-50 top-0 w-full items-center bg-[#9C0C0C] drop-shadow-xl"
       >
-        <div class="justify-start w-72 ml-12 h-full items-center flex">
-          <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-full" />
+        <div class="flex justify-between items-center h-20 px-4 md:px-12">
+          <div class="flex items-center">
+            <img
+              src="Material/LOGO/logo-full.svg"
+              alt="RunwaysAgency Logo"
+              class="w-48 md:w-72"
+            />
+          </div>
+          <div class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="navbar  py-[6px] rounded-[10px] bg-[--navactive]">HOME</a>
+            <a href="profile.html" class="navbar"
+              >PROFILE</a
+            >
+            <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
+            <a href="/" class="navbar">REGISTRATION</a>
+          </div>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
         </div>
-        <div class="flex justify-end w-full h-full mr-12 items-center">
-          <a href="#" class="navbar py-[6px] rounded-[10px] bg-[--navactive]">HOME</a>
-          <a href="profile.html" class="navbar">PROFIL</a>
-          <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
-          <a href="registration.html" class="navbar">REGISTRATION</a>
+        <div x-show="open" @click.outside="open = false" class="md:hidden">
+          <div class="flex flex-col space-y-4 p-4 bg-[#9C0C0C]">
+            <a href="index.html" class="navbar py-2 rounded-[10px] bg-[--navactive]">HOME</a>
+            <a
+              href="profile.html"
+              class="navbar "
+              >PROFILE</a
+            >
+            <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
+            <a href="/" class="navbar">REGISTRATION</a>
+          </div>
         </div>
       </nav>
-    </section>
+    </header>
     <!-- NAVBAR END -->
 
-    <section id="home">
+      <section id="home">
       <!-- CONTENT 1  -->
       <div class="w-full mt-[130px]">
-        <div class="w-full h-[500px] relative">
-          <img
-            src="Material/HOME/BERLINER-MODE-SALON-WITH-CATRICE-COSMETICS.jpg"
-            alt="background-image"
-            class="w-full h-full absolute"
-            style="object-fit: cover"
-          />
+        <div class="w-full h-[300px] md:h-[500px] relative">
+          <img src="Material/HOME/BERLINER-MODE-SALON-WITH-CATRICE-COSMETICS.jpg" alt="background-image" class="w-full h-full absolute object-cover" />
           <div class="bottom-0 z-10 text-white absolute mx-10 my-10">
-            <h1 class="text-5xl font-bold drop-shadow-lg">
-              Welcome To Runways!
-            </h1>
-            <h2 class="mt-2 text-4xl font-black drop-shadow-lg">
-              Where Style Takes Flight
-            </h2>
+            <h1 class="text-3xl md:text-5xl font-bold drop-shadow-lg">Welcome To Runways!</h1>
+            <h2 class="mt-2 text-2xl md:text-4xl font-black drop-shadow-lg">Where Style Takes Flight</h2>
           </div>
         </div>
       </div>
       <!-- CONTENT 1 END  -->
 
       <!-- CONTENT 2  -->
-      <div class="bg-[#9c0c0c] w-full h-[400px] flex items-center">
-        <div class="justify-start w-[40%] ml-12 h-full items-center flex">
-          <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-full" />
+      <div class="bg-[#9c0c0c] w-full h-auto md:h-[400px] flex flex-col md:flex-row items-center">
+        <div class="w-full md:w-[40%] ml-4 md:ml-12 h-full flex items-center justify-center">
+          <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-3/4 md:w-full" />
         </div>
-        <div class="w-[60%] px-12 text-white font-medium text-xl text-justify">
-          <p>
-            Runways adalah platform yang menghubungkan model berbakat dengan
-            kesempatan terbaik dalam industri modeling. Dengan portofolio
-            lengkap dan proses seleksi yang ketat, kami menyediakan layanan
-            kelas atas untuk klien kami dan memberdayakan model untuk mencapai
-            potensi mereka secara penuh
-          </p>
+        <div class="w-full md:w-[60%] px-4 md:px-12 text-white font-medium text-base md:text-xl text-justify">
+          <p>Runways adalah platform yang menghubungkan model berbakat dengan kesempatan terbaik dalam industri modeling. Dengan portofolio lengkap dan proses seleksi yang ketat, kami menyediakan layanan kelas atas untuk klien kami dan memberdayakan model untuk mencapai potensi mereka secara penuh</p>
         </div>
       </div>
       <!-- CONTENT 2 END  -->
@@ -123,7 +137,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_1.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   Runways Models at Dior catwalk 
@@ -158,7 +172,7 @@
               </div>
             </a>
           </div>
-          <!-- item 1 -->
+          <!-- item 1 -->   
 
                     <!-- item 2 -->
           <div class="link-item bg-[#9c0c0c] w-[280px]">
@@ -184,7 +198,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_2.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   LIM heading to Paris for attend Paris fashin week
@@ -245,7 +259,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_3.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   LIM heading to Paris for attend Paris fashin week
@@ -306,7 +320,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_4.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   LIM heading to Paris for attend Paris fashin week
@@ -367,7 +381,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_5.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   LIM heading to Paris for attend Paris fashin week
@@ -428,7 +442,7 @@
                 class="w-full h-full rounded-xl drop-shadow-sm"
               />
             </div>
-            <a href="#">
+            <a href="runways_6.html">
               <div class="mt-4 h-full top-0">
                 <h1 class="font-normal text-white text-sm mt-[-8px]">
                   LIM heading to Paris for attend Paris fashin week

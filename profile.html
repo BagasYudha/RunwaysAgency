@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,32 +18,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
-  <body>
-    <!-- NAVBAR START  -->
-    <section id="navbar">
+
+  <body class="font-['Poppins']">
+    <!-- NAVBAR START -->
+    <header x-data="{ open: false }">
       <nav
-        class="fixed z-50 top-0 justify-between items-center flex w-full h-20 bg-[#9C0C0C] drop-shadow-xl"
+        class="fixed z-50 top-0 w-full items-center bg-[#9C0C0C] drop-shadow-xl"
       >
-        <div class="justify-start w-72 ml-12 h-full items-center flex">
-          <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-full" />
+        <div class="flex justify-between items-center h-20 px-4 md:px-12">
+          <div class="flex items-center">
+            <img
+              src="Material/LOGO/logo-full.svg"
+              alt="RunwaysAgency Logo"
+              class="w-48 md:w-72"
+            />
+          </div>
+          <div class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="navbar">HOME</a>
+            <a
+              href="profile.html"
+              class="navbar py-[6px] rounded-[10px] bg-[--navactive]"
+              >PROFILE</a
+            >
+            <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
+            <a href="/" class="navbar">REGISTRATION</a>
+          </div>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
         </div>
-        <div class="flex justify-end w-full h-full mr-12 items-center">
-          <a href="index.html" class="navbar">HOME</a>
-          <a href="#" class="navbar py-[6px] rounded-[10px] bg-[--navactive]"
-            >PROFIL</a
-          >
-          <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
-          <a href="registration.html" class="navbar">REGISTRATION</a>
+        <div x-show="open" @click.outside="open = false" class="md:hidden">
+          <div class="flex flex-col space-y-4 p-4 bg-[#9C0C0C]">
+            <a href="index.html" class="navbar">HOME</a>
+            <a
+              href="profile.html"
+              class="navbar py-2 rounded-[10px] bg-[--navactive]"
+              >PROFILE</a
+            >
+            <a href="model_gallery.html" class="navbar">MODEL GALERRY</a>
+            <a href="/" class="navbar">REGISTRATION</a>
+          </div>
         </div>
       </nav>
-    </section>
+    </header>
     <!-- NAVBAR END -->
 
     <section id="profile">
@@ -530,17 +560,17 @@
       </section>
       <!-- KONTEN 3 END -->
 
-      <!-- FOOTER START -->
-      <footer class="bg-[#9c0c0c] mt-[10dvh]">
+      <!-- FOOTER -->
+      <footer class="bg-[#9c0c0c] bottom-0 mt-4 md:mt-20">
         <div class="w-full py-5 md:flex md:items-center md:justify-between">
-          <div class="justify-start ml-12">
+          <div class="justify-start ml-4 md:ml-12">
             <h2 class="text-base text-white font-normal">
               © COPYRIGHT 2024 RUNWAYS AGENCY
             </h2>
           </div>
 
-          <div class="h-full mx-12 justify-end">
-            <a href="mailto: runwaysagency@gmail.com" target="_blank">
+          <div class="h-full mx-4 md:mx-12 justify-end">
+            <a href="mailto:runwaysagency@gmail.com" target="_blank">
               <div class="flex items-center">
                 <i
                   class="bordertext-white text-white w-8"
