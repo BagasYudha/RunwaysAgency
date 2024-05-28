@@ -515,11 +515,27 @@
       document.addEventListener("DOMContentLoaded", function () {
         feather.replace(); // Inisialisasi feather icons
 
-        const heartIcon = document.getElementById("heart-icon");
-        heartIcon.addEventListener("click", function () {
+        const heartIcons = document.querySelectorAll("#heart-icon");
+        heartIcons.forEach(heartIcon => {
+          heartIcon.addEventListener("click", function () {
           heartIcon.classList.toggle("text-[#eb0000]");
         });
+        });
+        
       });
+
+    //   // untuk love icon klik
+    //   const loves = document.querySelectorAll("#heart-icon");
+    // loves.forEach((love) => {
+    //   love.addEventListener("click", function () {
+    //     const cekLove = love.classList.contains("text-white");
+    //     if (cekLove == "#de3333") {
+    //       love.setAttribute("fill", "#fff");
+    //     } else {
+    //       love.setAttribute("fill", "#de3333");
+    //     }
+    //   });
+    // });
     </script>
   </body>
 </html>
