@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be a Model - RunwaysAgency</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Material/LOGO/logo_logomark.ico"
+    />
+
+    <link rel="stylesheet" href="style/home-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="font-['Poppins']">
+    <!-- NAVBAR START -->
+    <header x-data="{ open: false }">
+      <nav
+        class="fixed z-50 top-0 w-full items-center bg-[#9C0C0C] drop-shadow-xl"
+      >
+        <div class="flex justify-between items-center h-20 px-4 md:px-12">
+          <div class="flex items-center">
+            <img
+              src="Material/LOGO/logo-full.svg"
+              alt="RunwaysAgency Logo"
+              class="w-48 md:w-72"
+            />
+          </div>
+          <div class="hidden md:flex space-x-6 items-center">
+            <a href="/information.html" class="navbar">INFORMATION</a>
+            <a href="/" class="navbar py-[6px] rounded-[10px] bg-[--navactive]"
+              >BE A MODEL</a
+            >
+            <a href="/" class="navbar">LOGOUT</a>
+          </div>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+        <div x-show="open" @click.outside="open = false" class="md:hidden">
+          <div class="flex flex-col space-y-4 p-4 bg-[#9C0C0C]">
+            <a href="information.html" class="navbar">INFORMATION</a>
+            <a
+              href="be_a_model.html"
+              class="navbar py-2 rounded-[10px] bg-[--navactive]"
+              >BE A MODEL</a
+            >
+            <a href="index.html" class="navbar">LOGOUT</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- NAVBAR END -->
+
+    <main>
+      <!-- CONTENT 1 -->
+      <section id="information" class="w-full h-full mt-24">
+        <div class="flex justify-center items-center mt-24">
+          <h1
+            class="text-3xl md:mt-8 md:text-5xl font-semibold italic drop-shadow-sm text-center"
+          >
+            FORMULIR REKRUTMENT NEW MODELS
+          </h1>
+        </div>
+        <div
+          class="w-full h-[300px] md:h-[500px] flex justify-center my-4 md:my-9"
+        >
+          <img
+            src="Material/GRAFIS LAIN/Frame 94.png"
+            alt="Chanel Runway"
+            class="w-[80%] h-auto"
+            style="object-fit: cover; object-position: center 80%"
+          />
+        </div>
+        <div class="flex justify-center md:py-16 px-4 md:px-20">
+          <h1 class="text-xl md:text-2xl text-center font-semibold">
+            Sebelum melakukan pengisian formulir, adapun tahap-tahap seleksi
+            yang akan dilakukan oleh seluruh calon model.
+          </h1>
+        </div>
+      </section>
+      <!-- CONTENT 1 END -->
+
+      <!-- CONTENT 2 INFO -->
+      <section
+        class="bg-[#f2f2f2] w-full justify-center flex h-full md:flex gap-24 my-10 py-2 md:py-4"
+      >
+        <div class="items-center h-full ml-5 justify-start md:mb-0">
+          <!-- menu 1 -->
+          <div class="flex items-center md:my-10">
+            <i
+              class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+              data-feather="file-text"
+            ></i>
+
+            <div class="flex items-center">
+              <div class="ml-2 items-center text-base font-semibold">
+                <h3 class="text-xl md:text-3xl">Pendaftaran</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- menu 2 -->
+          <div class="flex items-center md:my-10">
+            <i
+              class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+              data-feather="aperture"
+            ></i>
+
+            <div class="flex items-center">
+              <div class="ml-2 items-center text-base font-semibold">
+                <h3 class="text-xl md:text-3xl">Portofolio</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="items-center h-full justify-start md:mb-0">
+          <!-- menu 3 -->
+          <div class="flex items-center md:my-10">
+            <i
+              class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+              data-feather="clipboard"
+            ></i>
+
+            <div class="flex items-center">
+              <div class="ml-2 items-center text-base font-semibold">
+                <h3 class="text-xl md:text-3xl">Wawancara</h3>
+              </div>
+            </div>
+          </div>
+          <!-- menu 4 -->
+          <div class="flex items-center md:my-10">
+            <i
+              class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+              data-feather="mail"
+            ></i>
+
+            <div class="flex items-center">
+              <div class="ml-2 items-center text-base font-semibold">
+                <h3 class="text-xl md:text-3xl">Pengumuman</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTENT 2 JADWAL END -->
+
+      <!-- CONTENT 3  -->
+      <section id="search_info" class="w-full">
+        <div class="w-full flex justify-center">
+          <div
+            class="flex justify-center items-center w-[70%] my-4 md:my-8 p-2 md:p-6 md:px-10 bg-[--grey] rounded-2xl"
+          >
+            <h1
+              class="text-3xl md:text-5xl font-semibold italic drop-shadow-sm text-center"
+            >
+              PENGUMUMAN LOLOS KE TAHAP SELANJUTNYA
+            </h1>
+          </div>
+        </div>
+
+        <!-- SEARCH BAR  -->
+        <div class="w-full flex justify-center items-center md:my-3">
+          <form class="relative w-[50%]">
+            <input
+              type="text"
+              class="placeholder-shift h-12 w-full px-12 py-2 pr-12 border rounded-lg shadow-sm opacity-70 focus:outline-none focus:ring-2 focus:ring-[maroon] focus:border-transparent bg-[--grey]"
+              placeholder="Search..."
+            />
+            <button
+              type="submit"
+              class="absolute ml-[-20px] left-0 top-1/2 transform -translate-y-1/2 bg-[maroon] text-white p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-[maroon]"
+            >
+              <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- CONTENT 3 END  -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#9c0c0c] bottom-0 mt-4 md:mt-20">
+      <div class="w-full py-5 md:flex md:items-center md:justify-between">
+        <div class="justify-start ml-4 md:ml-12">
+          <h2 class="text-base text-white font-normal">
+            © COPYRIGHT 2024 RUNWAYS AGENCY
+          </h2>
+        </div>
+
+        <div class="h-full mx-4 md:mx-12 justify-end">
+          <a href="mailto:runwaysagency@gmail.com" target="_blank">
+            <div class="flex items-center">
+              <i
+                class="bordertext-white text-white w-8"
+                data-feather="mail"
+              ></i>
+              <div class="ml-2 items-center text-base font-normal text-white">
+                <h3>runwaysagency@gmail.com</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

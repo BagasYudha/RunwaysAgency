@@ -18,157 +18,199 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
 
   <body class="font-['Poppins']">
-    <!-- NAVBAR START  -->
-    <section id="navbar">
+    <!-- NAVBAR START -->
+    <header x-data="{ open: false }">
       <nav
-        class="fixed z-50 top-0 justify-between items-center flex w-full h-20 bg-[#9C0C0C] drop-shadow-xl"
+        class="fixed z-50 top-0 w-full items-center bg-[#9C0C0C] drop-shadow-xl"
       >
-        <div class="justify-start w-72 ml-12 h-full items-center flex">
-          <img src="Material/LOGO/logo-full.svg" alt="logo" class="w-full" />
+        <div class="flex justify-between items-center h-20 px-4 md:px-12">
+          <div class="flex items-center">
+            <img
+              src="Material/LOGO/logo-full.svg"
+              alt="RunwaysAgency Logo"
+              class="w-48 md:w-72"
+            />
+          </div>
+          <div class="hidden md:flex space-x-6 items-center">
+            <a
+              href="information.html"
+              class="navbar py-[6px] rounded-[10px] bg-[--navactive] items-center hover:text-gray-200"
+              >INFORMATION</a
+            >
+            <a
+              href="be_a_model.html"
+              class="navbar hover:text-gray-200 items-center"
+              >BE A MODEL</a
+            >
+            <a href="/" class="navbar hover:text-gray-200 items-center"
+              >LOGOUT</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
         </div>
-        <div class="flex justify-end w-full h-full mr-12 items-center">
-          <a href="/information.html" class="navbar">INFORMATION</a>
-          <a href="/" class="navbar">BE A MODEL</a>
-          <a href="/" class="navbar">LOGOUT</a>
+        <div x-show="open" @click.outside="open = false" class="md:hidden">
+          <div class="flex flex-col space-y-4 p-4 bg-[#9C0C0C]">
+            <a
+              href="/information.html"
+              class="navbar py-2 rounded-[10px] items-center bg-[--navactive] hover:text-gray-200"
+              >INFORMATION</a
+            >
+            <a href="/" class="navbar items-center hover:text-gray-200"
+              >BE A MODEL</a
+            >
+            <a href="/" class="navbar items-center hover:text-gray-200"
+              >LOGOUT</a
+            >
+          </div>
         </div>
       </nav>
-    </section>
+    </header>
     <!-- NAVBAR END -->
 
-    <section id="information" class="">
-      <!-- CONTENT 1  -->
-      <div class="w-full h-full mt-24">
+    <main>
+      <!-- CONTENT 1 -->
+      <section id="information" class="w-full h-full mt-24">
         <div class="flex justify-center items-center mt-24">
-          <h1 class="text-5xl font-semibold italic drop-shadow-sm">
+          <h1
+            class="text-3xl md:mt-8 md:text-5xl font-semibold italic drop-shadow-sm text-center"
+          >
             RUNWAYS SEEKING MODELS
           </h1>
         </div>
-        <div class="w-full h-[500px] relative mt-9">
+        <div class="w-full h-[300px] md:h-[500px] relative mt-9">
           <img
             src="Material/INFORMATION/19 Chanel Runway Sets That Were Absolutely Outrageous.jpg"
-            alt="background-image"
+            alt="Chanel Runway"
             class="w-full h-full absolute"
             style="object-fit: cover; object-position: center 80%"
           />
           <div class="z-10 relative flex justify-center">
-            <h1 class="text-5xl font-extrabold absolute drop-shadow-lg my-10">
-              RUN<span class="text-[--maroon]">//</span>AYS24
+            <h1
+              class="text-3xl md:text-5xl font-extrabold absolute drop-shadow-lg my-10"
+            >
+              RUN<span class="text-[--maroon]">//</span>WAYS24
             </h1>
           </div>
         </div>
-      </div>
+      </section>
       <!-- CONTENT 1 END -->
 
       <!-- CONTENT 2 JADWAL -->
-      <section class="h-[600px]">
+      <section
+        class="h-full bg-[#f2f2f2] my-10 shadow-sm flex flex-wrap justify-center py-6 md:py-20"
+      >
+        <!-- Jadwal 1 -->
         <div
-          class="h-[550px] bg-[#f2f2f2] my-[50px] shadow-sm flex justify-center py-6"
+          class="flex w-full md:w-1/4 mx-4 md:mx-9 items-center mb-6 md:mb-0"
         >
-          <!-- Jadwal 1  -->
-          <div class="flex w-[28%] mx-9 items-center">
-            <div class="flex items-start">
-              <div class="flex">
-                <i
-                  class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
-                  data-feather="calendar"
-                ></i>
-              </div>
-              <div class="flex items-center">
-                <div
-                  class="ml-2 items-center text-base font-bold text-[--maroon]"
-                >
-                  <h3 class="text-xl">AUDITION SEMARANG</h3>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Registration</h1>
-                    <h1 class="font-bold text-black">
-                      3 April - 13 April 2024
-                    </h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Audition</h1>
-                    <h1 class="font-bold text-black">13 April 2024</h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Place</h1>
-                    <h1 class="font-bold text-black">
-                      Golden City Hotel and Convention Hall, Semarang
-                    </h1>
-                  </div>
+          <div class="flex items-start">
+            <div class="flex">
+              <i
+                class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+                data-feather="calendar"
+              ></i>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="ml-2 items-center text-base font-bold text-[--maroon]"
+              >
+                <h3 class="text-xl">AUDITION SEMARANG</h3>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Registration</h1>
+                  <h1 class="font-bold text-black">3 April - 13 April 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Audition</h1>
+                  <h1 class="font-bold text-black">13 April 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Place</h1>
+                  <h1 class="font-bold text-black">
+                    Golden City Hotel and Convention Hall, Semarang
+                  </h1>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Jadwal 1  -->
-          <div class="flex w-[28%] mx-9 items-center">
-            <div class="flex items-start">
-              <div class="flex">
-                <i
-                  class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
-                  data-feather="calendar"
-                ></i>
-              </div>
-              <div class="flex items-center">
-                <div
-                  class="ml-2 items-center text-base font-bold text-[--maroon]"
-                >
-                  <h3 class="text-xl">AUDITION SURABAYA</h3>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Registration</h1>
-                    <h1 class="font-bold text-black">
-                      13 April - 23 April 2024
-                    </h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Audition</h1>
-                    <h1 class="font-bold text-black">23 April 2024</h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Place</h1>
-                    <h1 class="font-bold text-black">DBL Arena, Surabaya</h1>
-                  </div>
+        <!-- Jadwal 2 -->
+        <div
+          class="flex w-full md:w-1/4 mx-4 md:mx-9 items-center mb-6 md:mb-0"
+        >
+          <div class="flex items-start">
+            <div class="flex">
+              <i
+                class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+                data-feather="calendar"
+              ></i>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="ml-2 items-center text-base font-bold text-[--maroon]"
+              >
+                <h3 class="text-xl">AUDITION SURABAYA</h3>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Registration</h1>
+                  <h1 class="font-bold text-black">13 April - 23 April 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Audition</h1>
+                  <h1 class="font-bold text-black">23 April 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Place</h1>
+                  <h1 class="font-bold text-black">DBL Arena, Surabaya</h1>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Jadwal 1  -->
-          <div class="flex w-[28%] mx-9 items-center">
-            <div class="flex items-start">
-              <div class="flex">
-                <i
-                  class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
-                  data-feather="calendar"
-                ></i>
-              </div>
-              <div class="flex items-center">
-                <div
-                  class="ml-2 items-center text-base font-bold text-[--maroon]"
-                >
-                  <h3 class="text-xl">AUDITION BANDUNG</h3>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Registration</h1>
-                    <h1 class="font-bold text-black">23 April - 3 Mei 2024</h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Audition</h1>
-                    <h1 class="font-bold text-black">3 Mei 2024</h1>
-                  </div>
-                  <div class="w-full mt-2">
-                    <h1 class="font-normal text-black">Place</h1>
-                    <h1 class="font-bold text-black">
-                      Balai Sartika Convention Hall, Bandung
-                    </h1>
-                  </div>
+        <!-- Jadwal 3 -->
+        <div class="flex w-full md:w-1/4 mx-4 md:mx-9 items-center">
+          <div class="flex items-start">
+            <div class="flex">
+              <i
+                class="bordertext-white text-[--maroon] w-[50px] h-[50px]"
+                data-feather="calendar"
+              ></i>
+            </div>
+            <div class="flex items-center">
+              <div
+                class="ml-2 items-center text-base font-bold text-[--maroon]"
+              >
+                <h3 class="text-xl">AUDITION BANDUNG</h3>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Registration</h1>
+                  <h1 class="font-bold text-black">23 April - 3 Mei 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Audition</h1>
+                  <h1 class="font-bold text-black">3 Mei 2024</h1>
+                </div>
+                <div class="w-full mt-2">
+                  <h1 class="font-normal text-black">Place</h1>
+                  <h1 class="font-bold text-black">
+                    Balai Sartika Convention Hall, Bandung
+                  </h1>
                 </div>
               </div>
             </div>
@@ -178,73 +220,104 @@
       <!-- CONTENT 2 JADWAL END -->
 
       <!-- CONTENT 3 -->
-      <section class="h-[700px] bg-[#f2f2f2] my-[50px] shadow-sm">
-        <div class="flex justify-center items-center pt-14">
-          <p class="text-xl font-bold text-center w-[85%]">
+      <section class="h-full bg-[#f2f2f2] my-10 shadow-sm relative py-10">
+        <div class="flex justify-center text-center items-center pt-14">
+          <p class="text-xl md:text-2xl font-bold text-center w-[85%]">
             Runways Agency merupakan suatu agensi yang melahirkan para bintang
             dalam dunia modelling. Runways Agency menawarkan rekrutment untuk
             para calon bintang muda baru yang sangat berbakat untuk mendaftar
             dalam Runways Agency. Adapun tahap rekrutment dan seleksi untuk para
-            bintang baru yang daapt Anda akses di bawah ini.
+            bintang baru yang dapat Anda akses di bawah ini.
           </p>
         </div>
-        
-        <div class="h-[450px] flex justify-center">
-          <!-- Jadwal 1  -->
-          <div class="flex justify-center w-[28%] mx-9 items-center bg-[maroon] rounded-2xl">
+
+        <div class="flex flex-wrap justify-center gap-10 mt-16">
+          <!-- Man Requirements -->
+          <div class="w-full md:w-[45%]">
+            <div
+              class="w-20 h-20 bg-white rounded-full absolute opacity mt-[-40px] ml-[-20px] opacity-80"
+            ></div>
+            <div
+              class="w-20 h-20 bg-white rounded-full absolute opacity mt-[-15px] ml-[20px] opacity-70"
+            ></div>
+            <!-- text  -->
+            <div class="flex justify-center w-full bg-[maroon] rounded-2xl">
               <div class="items-center">
-                <div
-                  class="font-bold text-white"
-                >
-                  <h3 class="w-full text-xl text-center">AUDITION SEMARANG</h3>
+                <div class="font-normal text-white">
+                  <h3 class="w-full text-3xl text-center py-8">MAN</h3>
                 </div>
-                <div class="w-full mt-2">
-                  <p class="text-xl font-bold text-center w-[85%]">
-            Runways Agency merupakan suatu agensi yang melahirkan para bintang
-            dalam dunia modelling. Runways Agency menawarkan rekrutment untuk
-            para calon bintang muda baru yang sangat berbakat untuk mendaftar
-            dalam Runways Agency. Adapun tahap rekrutment dan seleksi untuk para
-            bintang baru yang daapt Anda akses di bawah ini.
-          </p>
-                
+                <div class="w-full px-4 mt-2 flex justify-center">
+                  <p class="text-2xl text-center w-full text-white pb-10">
+                    1. Pria usia 17-28 tahun<br />
+                    2. Tinggi badan minimal 170 cm<br />
+                    3. Berat badan proporsional<br />
+                    4. Good looking<br />
+                    5. Good Attitude<br />
+                    6. Memiliki kemampuan pose, video, dan fotogenik<br />
+                    7. Terbiasa di depan kamera
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-
+          <!-- Woman Requirements -->
+          <div class="w-full md:w-[45%]">
+            <div
+              class="w-20 h-20 bg-white rounded-full absolute opacity mt-[-40px] ml-[-20px] opacity-80"
+            ></div>
+            <div
+              class="w-20 h-20 bg-white rounded-full absolute opacity mt-[-15px] ml-[20px] opacity-70"
+            ></div>
+            <!-- text  -->
+            <div class="flex justify-center w-full bg-[maroon] rounded-2xl">
+              <div class="items-center">
+                <div class="font-normal text-white">
+                  <h3 class="w-full text-3xl text-center py-8">WOMAN</h3>
+                </div>
+                <div class="w-full px-4 mt-2 flex justify-center">
+                  <p class="text-2xl text-center w-full text-white pb-10">
+                    1. Wanita usia 17-26 tahun<br />
+                    2. Tinggi badan minimal 162 cm<br />
+                    3. Berat badan 45-58 kg<br />
+                    4. Good looking<br />
+                    5. Good Attitude<br />
+                    6. Memiliki kemampuan pose, video, dan fotogenik<br />
+                    7. Terbiasa di depan kamera
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- CONTENT 3 END -->
+    </main>
 
-      <section id="footer">
-        <footer class="bg-[#9c0c0c] bottom-0">
-          <div class="w-full py-5 md:flex md:items-center md:justify-between">
-            <div class="justify-start ml-12">
-              <h2 class="text-base text-white font-normal">
-                © COPYRIGHT 2024 RUNWAYS AGENCY
-              </h2>
-            </div>
+    <!-- FOOTER -->
+    <footer class="bg-[#9c0c0c] bottom-0">
+      <div class="w-full py-5 md:flex md:items-center md:justify-between">
+        <div class="justify-start ml-4 md:ml-12">
+          <h2 class="text-base text-white font-normal">
+            © COPYRIGHT 2024 RUNWAYS AGENCY
+          </h2>
+        </div>
 
-            <div class="h-full mx-12 justify-end">
-              <a href="mailto: runwaysagency@gmail.com" target="_blank">
-                <div class="flex items-center">
-                  <i
-                    class="bordertext-white text-white w-8"
-                    data-feather="mail"
-                  ></i>
-                  <div
-                    class="ml-2 items-center text-base font-normal text-white"
-                  >
-                    <h3>runwaysagency@gmail.com</h3>
-                  </div>
-                </div>
-              </a>
+        <div class="h-full mx-4 md:mx-12 justify-end">
+          <a href="mailto:runwaysagency@gmail.com" target="_blank">
+            <div class="flex items-center">
+              <i
+                class="bordertext-white text-white w-8"
+                data-feather="mail"
+              ></i>
+              <div class="ml-2 items-center text-base font-normal text-white">
+                <h3>runwaysagency@gmail.com</h3>
+              </div>
             </div>
-          </div>
-        </footer>
-      </section>
-    </section>
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <script>
       feather.replace();
