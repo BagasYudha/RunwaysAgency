@@ -39,7 +39,7 @@
     </section>
     <!-- NAVBAR END -->
 
-    <section id="berita-1" class="w-[95%] mt-36 mx-[5%]">
+    <section id="berita-1" class="w-[95%] mt-20 md:mt-36 mx-[5%]">
       <div class="flex items-center w-[95%] justify-start bg-white">
         <a href="index.html">
           <div class="flex items-center mt-1 mb-4">
@@ -56,7 +56,7 @@
       <div class="w-[95%]">
         <div class="h-full w-full flex relative">
           <!-- description  -->
-          <div class="pr-[5%] w-[65%] h-full mb-20">
+          <div class="pr-[5%] md:w-[65%] w-full h-full mb-6">
             <img
               src="Material/HOME/NEWS/gigihadid.jpg"
               alt="catwaldior"
@@ -101,7 +101,7 @@
             </div>
           </div>
           <!-- description end  -->
-          <div class="w-[32%] fixed right-0 mr-[5%]">
+          <div class="w-[32%] md:fixed right-0 mr-[5%] hidden md:block">
             <div
               class="text-center bg-[maroon] text-lg font-bold text-white rounded-lg py-3"
             >
@@ -210,17 +210,20 @@
       </div>
     </section>
 
-    <footer class="bg-[#9c0c0c]">
-      <div class="w-full py-5 md:flex md:items-center md:justify-between">
-        <div class="justify-start ml-12">
-          <h2 class="text-base text-white font-normal">
+      <!-- FOOTER -->
+    <footer class="bg-[#9c0c0c] bottom-0 mt-4 md:mt-20">
+      <div
+        class="w-full py-3 md:py-5 md:flex md:items-center md:justify-between"
+      >
+        <div class="justify-start flex">
+          <h2 class="text-base text-white font-normal mx-6 md:mx-12">
             © COPYRIGHT 2024 RUNWAYS AGENCY
           </h2>
         </div>
 
-        <div class="h-full mx-12 justify-end">
-          <a href="mailto: runwaysagency@gmail.com" target="_blank">
-            <div class="flex items-center">
+        <div class="h-full justify-end">
+          <a href="mailto:runwaysagency@gmail.com" target="_blank">
+            <div class="flex items-center mx-4 md:mx-12">
               <i
                 class="bordertext-white text-white w-8"
                 data-feather="mail"
@@ -233,6 +236,7 @@
         </div>
       </div>
     </footer>
+    <!-- FOOTER END  -->
 
     <script>
       feather.replace();
