@@ -68,10 +68,13 @@
   border-color: #ffffff;
 }
 
-/* .news::-webkit-scrollbar {
-  width: 10px;
+html::-webkit-scrollbar {
+  width: 0;
 }
-.berita-runways::-webkit-scrollbar {
+div::-webkit-scrollbar {
+  width: 0;
+}
+/* .berita-runways::-webkit-scrollbar {
   width: 0;
 }
 
@@ -85,10 +88,8 @@
 
 /* MODEL GALLERY END */
 
-
-
- /* Additional CSS for responsiveness */
-      @media (max-width: 1024px) {
+/* Additional CSS for responsiveness */
+/* @media (max-width: 1024px) {
         #navbar .navbar {
           padding: 0 10px;
         }
@@ -163,4 +164,4 @@
         footer .justify-end {
           margin: 5px 0;
         }
-      }
+      } */
