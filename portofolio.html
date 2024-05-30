@@ -43,8 +43,8 @@
           </a>
         </div>
         <div class="w-full justify-center items-center flex h-full">
-          <h1 class="text-3xl font-semibold italic text-white">
-            RUNWAYS HEADLINE
+          <h1 class="text-3xl font-semibold italic text-white uppercase">
+            Show us your best photo
           </h1>
         </div>
       </nav>
@@ -282,7 +282,8 @@
             <div class="w-[50%] flex justify-center mt-8">
               <button
                 type="submit"
-                class="justify-center h-14 w-full px-2 rounded-lg shadow-sm bg-[maroon] text-white font-bold mt-2 hover:bg-[#ffcbcb] hover:text-black focus:outline-none"
+                class="justify-center h-14 w-full px-2 rounded-lg shadow-sm bg-[maroon] text-white font-bold mt-2 hover:bg-[#ffcbcb] hover:text-black focus:outline-none transition-all"
+                id="btnTrigger"
               >
                 SEND
               </button>
@@ -321,8 +322,41 @@
     </footer>
     <!-- FOOTER END  -->
 
+    <!-- popup start -->
+    <section
+      class="w-[70%] min-h-[400px] fixed top-[180px] left-[50%] translate-x-[-50%] bg-[#D9D9D9] border-[#ababab] shadow-2xl rounded-xl flex flex-col justify-between items-center py-16 px-28 hidden"
+      id="framePopup"
+    >
+      <div class="text-4xl text-center font-bold">
+        <h1>TERIMA KASIH TELAH MENGISI PORTOFOLIO TERBAIKMU!</h1>
+        <h1 class="font-semibold text-3xl mt-6">
+          Tunggu dan nantikan pada pengumuman tahap selanjutnya!
+        </h1>
+      </div>
+      <a
+        href="be_a_model.html"
+        class="flex justify-center items-center block w-40 h-12 bg-[--maroon] text-2xl text-white rounded-lg font-semibold"
+        id="btnPopupSend"
+      >
+        SEND
+      </a>
+    </section>
+    <!-- popup end -->
+
     <script>
       feather.replace();
+
+      const btnPopup = document.querySelector("#btnTrigger");
+      const btnPopupSend = document.querySelector("#btnPopupSend");
+      const framePopup = document.querySelector("#framePopup");
+
+      btnPopup.addEventListener("click", function () {
+        framePopup.classList.remove("hidden");
+      });
+
+      btnPopupSend.addEventListener("click", function () {
+        framePopup.classList.add("hidden");
+      });
     </script>
   </body>
 </html>
