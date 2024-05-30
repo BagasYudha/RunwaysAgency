@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - RunwaysAgency</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Material/LOGO/logo_logomark.ico"
+    />
+
+    <link rel="stylesheet" href="style/home-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
+      defer
+    ></script>
+  </head>
+  <body class="font-['Poppins']">
+    <!-- NAVBAR START -->
+    <header x-data="{ open: false }">
+      <nav
+        class="fixed z-50 top-0 w-full items-center bg-[#9C0C0C] drop-shadow-xl"
+      >
+        <div class="flex justify-between items-center h-20 px-4 md:px-12">
+          <div class="flex items-center">
+            <img
+              src="Material/LOGO/logo-full.svg"
+              alt="RunwaysAgency Logo"
+              class="w-48 md:w-72"
+            />
+          </div>
+          <div class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="navbar">HOME</a>
+            <a href="profile.html" class="navbar">PROFILE</a>
+            <a href="/model_gallery.html" class="navbar">MODEL GALERRY</a>
+            <a
+              href="model_gallery.html"
+              class="navbar py-[6px] rounded-[10px] bg-[--navactive]"
+              >REGISTRATION</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button @click="open = !open" class="text-white focus:outline-none">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+        <div x-show="open" @click.outside="open = false" class="md:hidden">
+          <div class="flex flex-col space-y-4 p-4 bg-[#9C0C0C]">
+            <a href="index.html" class="navbar">HOME</a>
+            <a href="profile.html" class="navbar">PROFILE</a>
+            <a
+              href="model_gallery.html"
+              class="navbar py-2 rounded-[10px] bg-[--navactive]"
+              >MODEL GALERRY</a
+            >
+            <a href="/" class="navbar">REGISTRATION</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- NAVBAR END -->
+
+    <!-- LOGIN START -->
+    <section
+      class="w-full h-[calc(100dvh-80px)] mt-20 pb-11 flex flex-col justify-evenly items-center"
+    >
+      <div class="text-2xl font-medium">
+        <h1 class="inline-block mr-6 font-bold">Log In</h1>
+        <h1 class="inline-block ml-6 font-bold">Sign Up</h1>
+        <div
+          class="w-[100px] h-[30px] rounded-3xl border-2 border-black m-auto mt-1 relative cursor-pointer"
+          id="geser"
+        >
+          <img
+            src="Material/ICON/icons8-arrow-up-48.png"
+            alt=""
+            class="h-full aspect-square bg-black p-1 scale-125 rounded-full -rotate-[25deg] absolute left-0 transition-all"
+            id="panah"
+          />
+        </div>
+      </div>
+      <!-- Frame utama start -->
+      <div
+        class="min-w-[600px] min-h-[450px] shadow-lg rounded-3xl overflow-hidden relative"
+      >
+        <!-- frame login start -->
+        <div class="w-full h-full bg-[#484444] px-32 py-14">
+          <div
+            class="w-full h-full flex flex-col justify-between items-center text-white"
+          >
+            <h1 class="text-3xl mb-4">Login</h1>
+            <form action="" class="w-full h-full relative">
+              <div class="flex flex-col w-full mb-2">
+                <label for="email" class="text-lg">Email</label>
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="example@gmail.com"
+                  class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col w-full mb-2">
+                <label for="pass" class="text-lg">Password</label>
+                <input
+                  id="pass"
+                  type="text"
+                  placeholder="******"
+                  class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col items-center w-full absolute bottom-0">
+                <input
+                  type="button"
+                  value="Log In"
+                  class="w-full px-6 py-3 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
+                />
+                <h1
+                  class="cursor-pointer text-xs font-extralight"
+                  id="forgotpass"
+                >
+                  Forgot Password?
+                </h1>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- frame login end -->
+
+        <!-- frame sign up start -->
+        <div
+          class="w-full h-full bg-[#484444] px-32 py-14 absolute top-0 -left-[100%]"
+          id="signup"
+        >
+          <div
+            class="w-full h-full flex flex-col justify-between items-center text-white"
+          >
+            <h1 class="text-3xl mb-4">Sign Up</h1>
+            <form action="" class="w-full h-full relative">
+              <div class="flex flex-col w-full mb-2">
+                <label for="name" class="text-lg">Fullname</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Cristina Malenkva"
+                  class="w-full px-6 py-[6px] rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col w-full mb-2">
+                <label for="email" class="text-lg">Email</label>
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="example@gmail.com"
+                  class="w-full px-6 py-[6px] rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col w-full mb-2">
+                <label for="pass" class="text-lg">Password</label>
+                <input
+                  id="pass"
+                  type="text"
+                  placeholder="******"
+                  class="w-full px-6 py-[6px] rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col items-center w-full absolute bottom-0">
+                <input
+                  type="button"
+                  value="Log In"
+                  class="w-full px-6 py-2 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- frame sign up end -->
+
+        <!-- frame veirifikasi email start -->
+        <div
+          class="w-full h-full bg-[#484444] px-32 py-14 absolute top-0 hidden"
+          id="frameForgotPass"
+        >
+          <img
+            src="Material/ICON/icons8-left-2-24.png"
+            alt=""
+            class="w-7 h-7 absolute top-5 left-5 border border-white p-1 rounded-full"
+            id="BtnBackVerifEmail"
+          />
+          <div
+            class="w-full h-full flex flex-col justify-between items-center text-white"
+          >
+            <h1 class="text-3xl mb-4">Forgot Password?</h1>
+            <h2 class="text-xs">You can change your password here</h2>
+            <form action="" class="w-full h-full relative">
+              <div class="flex flex-col w-full mb-2 mt-10">
+                <label for="email" class="text-lg">Email</label>
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="example@gmail.com"
+                  class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col items-center w-full absolute bottom-0">
+                <input
+                  type="button"
+                  value="Reset"
+                  class="w-full px-6 py-2 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
+                  id="btnVerifEmail"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- frame veirifikasi email end -->
+
+        <!-- frame change password start -->
+        <div
+          class="w-full h-full bg-[#484444] px-32 py-14 absolute top-0 z-10 hidden"
+          id="frameConfirmForgotPass"
+        >
+          <img
+            src="Material/ICON/icons8-left-2-24.png"
+            alt=""
+            class="w-7 h-7 absolute top-5 left-5 border border-white p-1 rounded-full cursor-pointer"
+            id="BtnBackResetPass"
+          />
+          <div
+            class="w-full h-full flex flex-col justify-between items-center text-white"
+          >
+            <h1 class="text-3xl mb-4">Reset your password</h1>
+            <h2 class="text-xs">Strong password include numbers,</h2>
+            <h2 class="text-xs">leeters, and punctuation marks.</h2>
+            <form action="" class="w-full h-full relative">
+              <div class="flex flex-col w-full mt-4">
+                <label for="pass" class="text-lg">Enter new password</label>
+                <input
+                  id="pass"
+                  type="text"
+                  placeholder="exasample@gmail.com"
+                  class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col w-full">
+                <label for="newPass" class="text-lg"
+                  >Confirm new password</label
+                >
+                <input
+                  id="newPass"
+                  type="text"
+                  placeholder="exasample@gmail.com"
+                  class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+                />
+              </div>
+              <div class="flex flex-col items-center w-full absolute bottom-0">
+                <input
+                  type="button"
+                  value="Confirm"
+                  class="w-full px-6 py-2 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
+                  id="btnResetPass"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- frame change password end -->
+      </div>
+      <!-- Frame utama end -->
+    </section>
+    <!-- LOGIN END -->
+
+    <script>
+      const geser = document.querySelector("#geser");
+      const panah = document.querySelector("#panah");
+      const signup = document.querySelector("#signup");
+      const btnForgotPass = document.querySelector("#forgotpass");
+      const frameForgotPass = document.querySelector("#frameForgotPass");
+      const btnBackVerifEmail = document.querySelector("#BtnBackVerifEmail");
+      const btnVerifEmail = document.querySelector("#btnVerifEmail");
+      const btnBackResetPass = document.querySelector("#BtnBackResetPass");
+      const btnResetPass = document.querySelector("#btnResetPass");
+      const frameConfirmForgotPass = document.querySelector(
+        "#frameConfirmForgotPass"
+      );
+
+      //sig in to sign up button
+      geser.addEventListener("click", function () {
+        panah.classList.toggle("left-[calc(100%-30px)]");
+        panah.classList.toggle("rotate-[25deg]");
+        signup.classList.toggle("-left-[100%]");
+      });
+
+      //   forgot password button
+      btnForgotPass.addEventListener("click", function () {
+        frameForgotPass.classList.remove("hidden");
+      });
+
+      //   btn back verif email
+      btnBackVerifEmail.addEventListener("click", function () {
+        frameForgotPass.classList.add("hidden");
+      });
+
+      //   btn reset verif email
+      btnVerifEmail.addEventListener("click", function () {
+        frameForgotPass.classList.add("hidden");
+        frameConfirmForgotPass.classList.remove("hidden");
+      });
+
+      //   btn back reset password
+      btnBackResetPass.addEventListener("click", function () {
+        frameConfirmForgotPass.classList.add("hidden");
+        frameForgotPass.classList.remove("hidden");
+      });
+
+      //   btn reset new password
+      btnResetPass.addEventListener("click", function () {
+        frameConfirmForgotPass.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+<div class="w-full h-2/3 bg-[#484444] px-32 py-14">
+    <div
+      class="w-full h-full flex flex-col justify-between items-center text-white"
+    >
+      <h1 class="text-3xl mb-4">Forgot Password?</h1>
+      <h2 class="text-xs">You can reset your password here</h2>
+      <form action="" class="w-full h-full relative">
+        <div class="flex flex-col w-full mb-2">
+          <label for="email" class="text-lg">Email</label>
+          <input
+            id="email"
+            type="text"
+            placeholder="example@gmail.com"
+            class="w-full px-6 py-3 rounded-lg text-sm text-[#484444]"
+          />
+        </div>
+        <div class="flex flex-col items-center w-full absolute bottom-0">
+          <input
+            type="button"
+            value="Log In"
+            class="w-full px-6 py-3 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
+          />
+        </div>
+      </form>
+    </div>
+  </div> -->
