@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Be a Model - RunwaysAgency</title>
+    <title>Model Galerry - RunwaysAgency</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -28,7 +28,12 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.5/dist/cdn.min.js"
       defer
     ></script>
+
+
+  </style>
   </head>
+
+
 
   <body class="font-['Poppins']">
     <!-- NAVBAR START -->
@@ -618,6 +623,7 @@
       });
       womens.forEach((women) => {
         women.classList.remove("hidden");
+        women.style.height = "padding:";
       });
     });
     menuMain.addEventListener("click", function () {
@@ -628,5 +634,6 @@
         men.classList.remove("hidden");
       });
     });
+
   </script>
 </html>
