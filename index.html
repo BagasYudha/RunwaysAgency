@@ -139,7 +139,7 @@
             </div>
             <a href="runways_1.html">
               <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px] " id="text-container">
                   Runways Models at Dior catwalk 
                 </h1>
                 <div class="flex w-full">
@@ -199,8 +199,8 @@
               />
             </div>
             <a href="runways_2.html">
-              <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+              <div class="mt-4 h-full top-0" >
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px]" >
                   LIM heading to Paris for attend Paris fashin week
                 </h1>
                 <div class="flex w-full">
@@ -261,7 +261,7 @@
             </div>
             <a href="runways_3.html">
               <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px]" id="text-container">
                   Behind the scene Gigi Tommy Hilfiger Photo shoot
                 </h1>
                 <div class="flex w-full">
@@ -322,7 +322,7 @@
             </div>
             <a href="runways_4.html">
               <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px]">
                   New face from Runways, Lai Guanlin
                 </h1>
                 <div class="flex w-full">
@@ -383,7 +383,7 @@
             </div>
             <a href="runways_5.html">
               <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px]">
                   Interview with Soyi, Runways model
                 </h1>
                 <div class="flex w-full">
@@ -444,7 +444,7 @@
             </div>
             <a href="runways_6.html">
               <div class="mt-4 h-full top-0">
-                <h1 class="font-normal text-white text-sm mt-[-8px]">
+                <h1 class="shorten-text font-normal text-white text-sm mt-[-8px]">
                   Gigi Hadid At Met Gala Manhattan
                 </h1>
                 <div class="flex w-full">
@@ -511,6 +511,17 @@
     </footer>
     <!-- FOOTER END  -->
     </section>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll('.shorten-text');
+            elements.forEach(function(element) {
+                var text = element.innerText;
+                if (text.length > 35) {
+                    element.innerText = text.substring(0, 35) + '...';
+                }
+            });
+        });
+    </script>
     <script>
       feather.replace();
     </script>
