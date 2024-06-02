@@ -599,36 +599,5 @@
         }
       });
     });
-
-    const mens = document.querySelectorAll(".men");
-    const womens = document.querySelectorAll(".women");
-    const menuMain = document.querySelector("#mainboard");
-    const menuMen = document.querySelector("#men");
-    const menuWomen = document.querySelector("#women");
-
-    menuMen.addEventListener("click", function () {
-      womens.forEach((women) => {
-        women.classList.add("hidden");
-      });
-      mens.forEach((men) => {
-        men.classList.remove("hidden");
-      });
-    });
-    menuWomen.addEventListener("click", function () {
-      mens.forEach((men) => {
-        men.classList.add("hidden");
-      });
-      womens.forEach((women) => {
-        women.classList.remove("hidden");
-      });
-    });
-    menuMain.addEventListener("click", function () {
-      womens.forEach((women) => {
-        women.classList.remove("hidden");
-      });
-      mens.forEach((men) => {
-        men.classList.remove("hidden");
-      });
-    });
   </script>
 </html>
