@@ -179,6 +179,7 @@
               </div>
               <div class="flex flex-col items-center w-full absolute bottom-0">
                 <input
+                  id="btnSignup"
                   type="button"
                   value="Sign Up"
                   class="w-full px-6 py-2 rounded-lg text-xl bg-[--maroon] text-white mb-2 cursor-pointer"
@@ -293,12 +294,20 @@
       const btnVerifEmail = document.querySelector("#btnVerifEmail");
       const btnBackResetPass = document.querySelector("#BtnBackResetPass");
       const btnResetPass = document.querySelector("#btnResetPass");
+      const btnSignup = document.querySelector("#btnSignup");
       const frameConfirmForgotPass = document.querySelector(
         "#frameConfirmForgotPass"
       );
 
       //sig in to sign up button
       geser.addEventListener("click", function () {
+        panah.classList.toggle("left-[calc(100%-30px)]");
+        panah.classList.toggle("rotate-[25deg]");
+        signup.classList.toggle("-left-[100%]");
+      });
+
+      // button signup
+      btnSignup.addEventListener("click", function () {
         panah.classList.toggle("left-[calc(100%-30px)]");
         panah.classList.toggle("rotate-[25deg]");
         signup.classList.toggle("-left-[100%]");
